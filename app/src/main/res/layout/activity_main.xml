@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#191826"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -23,8 +24,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:background="@drawable/bottom_nav_bg"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_item"
         />
