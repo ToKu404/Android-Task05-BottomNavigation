@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.task5mobile_draco.fragments.DramaFragment;
+import com.example.task5mobile_draco.fragments.HistoryFragment;
 import com.example.task5mobile_draco.fragments.MovieFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView = findViewById(R.id.bottom_nav);
         //Instance HashMap
         fragmentMap = new HashMap<>();
+        // Change Color Of Action Bar
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#191826"));
+        getSupportActionBar().setBackgroundDrawable(colorDrawable);
     }
 
     //Ketika Activity Dimulai
@@ -38,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         // Menambahkan fragment2 kedalam hashmap yang keynya adalah id fragmane, dan valuenya fragment
         fragmentMap.put(R.id.menu_item_drama, DramaFragment.newInstance());
         fragmentMap.put(R.id.menu_item_movie, MovieFragment.newInstance());
-        fragmentMap.put(R.id.menu_item_history, MovieFragment.newInstance());
+        fragmentMap.put(R.id.menu_item_history, HistoryFragment.newInstance());
 
         //Bottom Navigation setting, dan memilih fragment awal
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -59,9 +65,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.menu_item_movie:
                 setActionBarTitle("Movie");
                 break;
-            case R.id.menu_item_history:
-                setActionBarTitle("History");
-                break;
+//            case R.id.menu_item_history:
+//                setActionBarTitle("History");
+//                break;
         }
         //Mengganti frame layout dengan fragment yang dipilih
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
