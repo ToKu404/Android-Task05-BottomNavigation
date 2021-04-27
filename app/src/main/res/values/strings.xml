@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Draco</string>
+    <string name="label_drama">Drama</string>
+    <string name="label_movie">Movie</string>
+    <string name="label_history">History</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
