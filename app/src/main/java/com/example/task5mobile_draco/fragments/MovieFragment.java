@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.task5mobile_draco.DetailMovieActivity;
+import com.example.task5mobile_draco.MovieDetailActivity;
 import com.example.task5mobile_draco.OnItemClickListener;
 import com.example.task5mobile_draco.R;
 import com.example.task5mobile_draco.moviedata.MovieDb;
@@ -53,7 +53,7 @@ public class MovieFragment extends Fragment implements OnItemClickListener<Movie
 
     @Override
     public void onClick(MovieModel movieModel) {
-        Intent detailActivity = new Intent(getActivity(), DetailMovieActivity.class);
+        Intent detailActivity = new Intent(getActivity(), MovieDetailActivity.class);
         if(movieModel!=null){
             detailActivity.putExtra("MOVIE_DETAIL", movieModel);
             startActivity(detailActivity);

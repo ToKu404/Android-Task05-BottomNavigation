@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         // Change Color Of Action Bar
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#191826"));
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     //Ketika Activity Dimulai
@@ -65,9 +66,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.menu_item_movie:
                 setActionBarTitle("Movie");
                 break;
-//            case R.id.menu_item_history:
-//                setActionBarTitle("History");
-//                break;
+            case R.id.menu_item_history:
+                setActionBarTitle("History");
+                break;
         }
         //Mengganti frame layout dengan fragment yang dipilih
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
