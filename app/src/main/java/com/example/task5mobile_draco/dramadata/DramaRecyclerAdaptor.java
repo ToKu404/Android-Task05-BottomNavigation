@@ -51,7 +51,7 @@ public class DramaRecyclerAdaptor extends RecyclerView.Adapter<DramaRecyclerAdap
         TextView tvTitle;
         TextView tvGenre;
         TextView tvSinopsis;
-        TextView tvTipe;
+        TextView tvEps;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,7 +61,7 @@ public class DramaRecyclerAdaptor extends RecyclerView.Adapter<DramaRecyclerAdap
             tvTitle = itemView.findViewById(R.id.tv_drama_name);
             tvGenre = itemView.findViewById(R.id.tv_drama_genre);
             tvSinopsis = itemView.findViewById(R.id.tv_drama_sinopsis);
-            tvTipe = itemView.findViewById(R.id.tv_drama_tipe);
+            tvEps = itemView.findViewById(R.id.tv_drama_eps);
 
         }
 
@@ -71,7 +71,7 @@ public class DramaRecyclerAdaptor extends RecyclerView.Adapter<DramaRecyclerAdap
             tvTitle.setText(drama.getTitle());
             tvGenre.setText(drama.getGenre());
             tvSinopsis.setText(drama.getSinopsis());
-            tvTipe.setText(drama.getTipe());
+            tvEps.setText(drama.getEps());
         }
 
         @Override

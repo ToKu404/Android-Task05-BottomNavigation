@@ -19,7 +19,7 @@ public class DramaDb {
         TypedArray posters = context.getResources().obtainTypedArray(R.array.dr_poster);
         String[] titles = context.getResources().getStringArray(R.array.dr_titles);
         String[] genres = context.getResources().getStringArray(R.array.dr_genres);
-        String[] tipes = context.getResources().getStringArray(R.array.dr_tipe);
+        String[] eps = context.getResources().getStringArray(R.array.dr_eps);
         String[] sinopsis = context.getResources().getStringArray(R.array.dr_sinopsis);
         for (int i = 0; i < titles.length; i++) {
             DramaModel drama = new DramaModel();
@@ -27,7 +27,7 @@ public class DramaDb {
             drama.setTitle(titles[i]);
             drama.setGenre(genres[i]);
             drama.setSinopsis(sinopsis[i]);
-            drama.setTipe(tipes[i]);
+            drama.setEps(eps[i]);
             listDrama.add(drama);
         }
         return listDrama;

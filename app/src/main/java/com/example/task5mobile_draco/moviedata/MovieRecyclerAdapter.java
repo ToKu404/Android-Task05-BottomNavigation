@@ -69,7 +69,6 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
             tvLength.setText(movie.getDuration());
             tvLimitOld.setText(movie.getLimitold());
             ratingBar.setRating(Float.parseFloat(movie.getRating()));
-
         }
         @Override
         public void onClick(View v) {

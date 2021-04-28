@@ -17,7 +17,7 @@ public class DramaDetailActivity extends AppCompatActivity {
     private TextView tvTitle;
     private TextView tvGenre;
     private TextView tvSinopsis;
-    private TextView tvTipe;
+    private TextView tvEps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class DramaDetailActivity extends AppCompatActivity {
         tvTitle = (TextView)findViewById(R.id.tv_dr_title);
         tvGenre = (TextView)findViewById(R.id.tv_dr_genre);
         tvSinopsis = (TextView)findViewById(R.id.tv_dr_sinopsis);
-        tvTipe = (TextView)findViewById(R.id.tv_dr_tipe);
+        tvEps = (TextView)findViewById(R.id.tv_dr_eps);
         // Change Color Of Action Bar
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#191826"));
         getSupportActionBar().setBackgroundDrawable(colorDrawable);
@@ -43,7 +43,7 @@ public class DramaDetailActivity extends AppCompatActivity {
         ivBanner.setImageResource(dramaModel.getPoster());
         tvTitle.setText(dramaModel.getTitle());
         tvGenre.setText(dramaModel.getGenre());
-        tvTipe.setText(dramaModel.getTipe());
+        tvEps.setText(dramaModel.getEps());
         tvSinopsis.setText(dramaModel.getSinopsis());
         getSupportActionBar().setTitle(dramaModel.getTitle());
     }

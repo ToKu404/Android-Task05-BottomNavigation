@@ -10,10 +10,20 @@ public class MovieModel implements Parcelable {
     private String limitold;
     private String duration;
     private String rating;
+
+
+
+    private String sinopsis;
     MovieModel(){
 
     }
+    public String getSinopsis() {
+        return sinopsis;
+    }
 
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
+    }
     public String getGenres() {
         return genres;
     }
@@ -68,6 +78,7 @@ public class MovieModel implements Parcelable {
         limitold = in.readString();
         duration = in.readString();
         rating = in.readString();
+        sinopsis = in.readString();
     }
 
     public static final Creator<MovieModel> CREATOR = new Creator<MovieModel>() {
@@ -95,6 +106,7 @@ public class MovieModel implements Parcelable {
         dest.writeString(limitold);
         dest.writeString(duration);
         dest.writeString(rating);
+        dest.writeString(sinopsis);
     }
 
 }

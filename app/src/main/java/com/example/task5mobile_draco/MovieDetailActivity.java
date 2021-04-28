@@ -45,6 +45,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         limitold.setText(movieModel.getLimitold());
         duration.setText(movieModel.getDuration());
         rating.setRating(Float.parseFloat(movieModel.getRating()));
+        sinopsis.setText(movieModel.getSinopsis());
         getSupportActionBar().setTitle(movieModel.getTitle());
     }
     @Override

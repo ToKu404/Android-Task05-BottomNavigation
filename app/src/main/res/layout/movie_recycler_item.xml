@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:text="157 min"
                     android:fontFamily="@font/lato_bold"
-                    android:textColor="#5D5D67"
+                    android:textColor="#77777C"
                     android:textSize="7sp"/>
             </LinearLayout>
             <View

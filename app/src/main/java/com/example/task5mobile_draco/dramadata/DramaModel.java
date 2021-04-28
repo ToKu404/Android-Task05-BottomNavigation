@@ -24,12 +24,12 @@ public class DramaModel implements Parcelable {
         this.genre = genre;
     }
 
-    public String getTipe() {
-        return tipe;
+    public String getEps() {
+        return eps;
     }
 
-    public void setTipe(String tipe) {
-        this.tipe = tipe;
+    public void setEps(String eps) {
+        this.eps = eps;
     }
 
     public String getSinopsis() {
@@ -50,14 +50,14 @@ public class DramaModel implements Parcelable {
 
     private String title;
     private String genre;
-    private String tipe;
+    private String eps;
     private String sinopsis;
     private int poster;
 
     protected DramaModel(Parcel in) {
         title = in.readString();
         genre = in.readString();
-        tipe = in.readString();
+        eps = in.readString();
         sinopsis = in.readString();
         poster = in.readInt();
     }
@@ -83,7 +83,7 @@ public class DramaModel implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
         dest.writeString(genre);
-        dest.writeString(tipe);
+        dest.writeString(eps);
         dest.writeString(sinopsis);
         dest.writeInt(poster);
     }
